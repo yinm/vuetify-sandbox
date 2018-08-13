@@ -9,46 +9,45 @@
 
 <div id="app">
   <v-app id="inspire">
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout align-center justify-center>
-          <v-flex xs12 sm8 md4>
-            <v-card class="elevation-12">
-              <v-toolbar dark color="primary">
-                <v-toolbar-title>Login form</v-toolbar-title>
+    <v-container grid-list-md text-xs-center>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <v-card dark color="primary">
+            <v-card-text class="px-0">12</v-card-text>
+          </v-card>
+        </v-flex>
 
-                <v-spacer></v-spacer>
+        <v-flex v-for="i in 2" :key="`6${i}`" xs6>
+          <v-card dark color="secondary">
+            <v-card-text class="px-0">6</v-card-text>
+          </v-card>
+        </v-flex>
 
-                <v-tooltip bottom>
-                  <v-btn
-                    icon
-                    large
-                    :href="source"
-                    target="_blank"
-                    slot="activator"
-                  >
-                    <v-icon large>code</v-icon>
-                  </v-btn>
-                  <span>Source</span>
-                </v-tooltip>
-              </v-toolbar>
+        <v-flex v-for="i in 3" :key="`4${i}`" xs4>
+          <v-card dark color="primary">
+            <v-card-text class="px-0">4</v-card-text>
+          </v-card>
+        </v-flex>
 
-              <v-card-text>
-                <v-form>
-                  <v-text-field prepend-icon="person" name="login" label="Login" type="text"></v-text-field>
-                  <v-text-field prepend-icon="lock" name="password" label="password" type="password"></v-text-field>
-                </v-form>
-              </v-card-text>
+        <v-flex v-for="i in 4" :key="`3${i}`" xs3>
+          <v-card dark color="secondary">
+            <v-card-text class="px-0">3</v-card-text>
+          </v-card>
+        </v-flex>
 
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary">Login</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
+        <v-flex v-for="i in 6" :key="`2${i}`" xs2>
+          <v-card dark color="primary">
+            <v-card-text class="px-0">2</v-card-text>
+          </v-card>
+        </v-flex>
+
+        <v-flex v-for="i in 12" :key="`1${i}`" xs1>
+          <v-card dark color="secondary">
+            <v-card-text class="px-0">1</v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </v-app>
 </div>
 
@@ -57,13 +56,6 @@
 <script>
   new Vue({
     el: '#app',
-    data: () => ({
-      drawer: null
-    }),
-
-    props: {
-      source: String
-    }
   })
 </script>
 </body>
